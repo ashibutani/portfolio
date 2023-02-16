@@ -1,0 +1,548 @@
+@charset "utf-8";
+
+/* 全てに適用 */
+img {
+    width: 100%;
+    height: auto;
+}
+
+@font-face {
+    font-family: 'chikugo2';
+    src: url(../fonts/GenEiChikugoMin2-R.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'AkazukiPOP';
+    src: url(../fonts/AkazukiPOP.otf) format('opentype');
+}
+
+header {
+    font-family: AkazukiPOP;
+}
+
+main {
+    font-family: chikugo2;
+    font-size: clamp(13px, 1.4vw, 18px);
+}
+p {
+    line-break:strict;   
+}
+span {
+    display: inline-block;
+}
+/****左固定部分*****/
+.sp_nav {
+    display: none;
+}
+
+.left {
+    width: 18vw;
+    height: 100%;
+    background-color: #000000;
+    position: fixed;
+    margin-top: -30px;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: max(2.4vw, 19px);
+    font-weight: bold;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.pc_nav ul {
+    width: min(66%, 150px);
+    margin: 50% auto;
+}
+
+.pc_nav li {
+    height: 7vh;
+    background-color: #ffffff;
+    margin-top: 30px;
+    text-align: center;
+    line-height: 58px;
+    position: relative;
+}
+
+.pc_nav p {
+    position: absolute;
+    top: 2%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 100;
+    font-size: clamp(13px, 1.4vw, 18px);
+}
+
+/***liアンダーバー*****************/
+.pc_nav li {
+    position: relative;
+}
+
+.pc_nav li:nth-child(1)::after {
+    position: absolute;
+    bottom: 10%;
+    left: -10%;
+    width: min(12vw, 150px);
+    height: 2vh;
+    content: '';
+    background: #544960;
+    transform: scale(0, 1);
+    /*トランス前の下線*/
+    transform-origin: left top;
+    /*トランスフォーム開始位置*/
+    transition: transform .3s;
+    /*アニメーション速度*/
+}
+
+.pc_nav li:nth-child(2)::after {
+    position: absolute;
+    bottom: 10%;
+    left: -10%;
+    width: min(12vw, 150px);
+    height: 2vh;
+    content: '';
+    background: #D5AE00;
+    transform: scale(0, 1);  
+    transform-origin: left top;   
+    transition: transform .3s;
+}
+
+.pc_nav li:nth-child(3)::after {
+    position: absolute;
+    bottom: 10%;
+    left: -10%;
+    width: min(12vw, 150px);
+    height: 2vh;
+    content: '';
+    background: #406653;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: transform .3s;
+}
+
+.pc_nav li:nth-child(4)::after {
+    position: absolute;
+    bottom: 10%;
+    left: -10%;
+    width: min(12vw, 150px);
+    height: 2vh;
+    content: '';
+    background: #C59B6D;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: transform .3s;
+}
+
+/***ホバー*****************/
+h1:hover {
+    opacity: 70%;
+}
+
+.pc_nav li:nth-child(1):hover::after {
+    transform: scale(1, 1);
+    /*トランス後の下線*/
+}
+
+.pc_nav li:nth-child(2):hover::after {
+    transform: scale(1, 1);
+}
+
+.pc_nav li:nth-child(3):hover::after {
+    transform: scale(1, 1);
+}
+
+.pc_nav li:nth-child(4):hover::after {
+    transform: scale(1, 1);
+}
+
+
+
+/***メイン部分******/
+/***プロフィール*****/
+.midashi {
+    width: fit-content;
+    font-size: max(2.6vw, 25px);
+    border: solid 2px #000000;
+    padding-left: 7px;
+    padding-right: 7px;
+    margin-bottom: 20px;
+    font-family: AkazukiPOP;
+}
+
+.main {
+    margin-left: 18vw;
+    margin-top: 30px;
+}
+
+.profile_wrap {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.prof_top_box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pofile1 {
+    display: grid;
+    place-items: center;
+}
+
+table {
+    height: 47px;
+    width: fit-content;
+    margin: 1vw;
+}
+
+table th {
+    width: 60px;
+}
+
+.pofile1_pic {
+    width: max(20vw, 250px);
+}
+
+.pofile2 {
+    margin-top: 4vw;
+}
+
+.pofile2 p {
+    line-height: 25px;
+    margin-top: 20px;
+}
+
+/***スキル＆プロダクト******/
+.midashi_2 {
+    /* Skills,Products */
+    font-size: max(2.4vw, 19px);
+    line-height: 60px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.midashi_3 {
+    /* Web, Graphic */
+    font-size: max(1.8vw, 15px);
+}
+
+.skills_products {
+    background-color: #EAE8E8;
+    margin-top: 100px;
+    padding-top: 50px;
+}
+
+.skillsproducts_wrap {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+/***スキル******/
+.skills_bigbox1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.skills_box {
+    width: max(17vw, 150px);
+    height: max(17vw, 150px);
+    margin: 10px;
+    background-color: #ffffff;
+
+}
+
+.skills_bigbox2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.skills_box2 {
+    width: max(20vw, 250px);
+    height: max(17vw, 200px);
+    background-color: #ffffff;
+    margin: 10px;
+}
+
+.skills_icon {
+    width: 30%;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+.skills_box2 .skills_icon{
+    width: 25%;
+    margin-top: 7px;
+}
+.html_css_icon {
+    display: flex;
+    justify-content: center;
+}
+
+.html_css_icon .skills_icon {
+    margin: 5px;
+    width: 20%;
+}
+
+.skills_text {
+    margin: 5px;
+}
+
+.skills_text p {
+    text-align: center;
+    font-size: clamp(10px, 1.4vw, 14px);
+    margin-top: 13px;
+}
+
+/***プロダクト******/
+/***web******/
+.products_bigbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 100px;
+    
+}
+
+.products_box {
+    width: max(17vw, 200px);
+    height: fit-content;
+    margin: 30px 15px 15px 15px;
+}
+
+.products_picbox {
+    background-color: #ffffff;
+    width: max(17vw, 200px);
+    height: max(17vw, 200px);
+    box-shadow: 0 0 10px -5px grey;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.products_pic {
+    width: 130%;
+    overflow: hidden;
+}
+
+.products_text {
+    background-color: #EAE8E8;
+    width: max(17vw, 200px);
+    height: fit-content;
+    text-align: center;
+    line-height: 45px;
+    
+}
+.products_text .title{
+    margin-top: 10px;
+ 
+}
+.products_text .desc{
+    text-align: center;
+    line-height: 23px;
+}
+.products_picbox:hover {
+    transform: scale(1.03)
+}
+
+/***graphic******/
+
+.gp_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.gp_box {
+    width: max(17vw, 200px);
+    height: max(20vw, 250px);
+    margin: 15px;
+}
+
+
+/**LP**/
+.lp_img {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.gp_describe {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/**広告**/
+.ad_img {
+    width: 60%;
+    margin: 15px auto;
+}
+
+/**ロゴ**/
+.logo_img {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/**パンフレット**/
+.panf_img {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/**パッケージ**/
+
+.package_img {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/*ポップアップここから*/
+/*ポップアップここから*/
+.popup_wrap input {
+    display: none;
+}
+
+.popup_overlay {
+    justify-content: center;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.5s, transform 0s 0.5s;
+    transform: scale(0);
+}
+
+.popup_trigger {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.popup_content {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    padding: 30px 30px 15px;
+    box-sizing: border-box;
+    background: #fff;
+    line-height: 1.4em;
+    transition: 0.5s;
+    margin: 40px auto;
+}
+
+
+.close_btn {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.popup_wrap input:checked~.popup_overlay {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.5s;
+}
+
+.open_btn {
+    display: inline-block;
+    width: max(17vw, 200px);
+    height: max(17vw, 200px);
+    cursor: pointer;
+    //transition: .3s ease;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px -5px grey;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+}
+
+.gp_img {
+    width: 70%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.open_btn:hover {
+    transform: scale(1.03)
+}
+
+/*ポップアップココまで*/
+
+
+/**Vision****/
+.vision_wrap {
+    width: 80%;
+    margin: 50px auto 200px auto;
+}
+
+/* topへのボタン */
+.page_top {
+    font-size: clamp(30px, 10vw ,60px);
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    opacity: 70%;
+    animation: bound-anim 0.8s infinite;
+}
+@keyframes bound-anim {	
+	30% {bottom: 3%;}		
+}
+
+
+/* ***************** */
+/* メディアクエリ　スマホ 350px-520px */
+/* ***************** */
+
+@media (max-width:520px) {
+    h1 {
+        writing-mode: vertical-rl;
+        text-orientation: sideways;
+        font-size: 25px;
+        margin: 50px auto;
+    }
+    .pc_nav {
+        display: none;
+    }
+    .sp_nav {
+        display: inline;
+    }
+    .sp_nav p {
+        writing-mode: vertical-rl;
+        text-orientation: sideways;
+    }
+    .sp_nav li {
+        color: #ffffff;
+        margin: 10px auto;
+        width: 20px;
+        height: fit-content;
+    }
+    .fa-caret-down:before {
+        padding: 6px;
+    }
+    /* ホバー */
+    .sp_nav li:nth-child(1):hover {
+        color: #544960;
+    }
+    .sp_nav li:nth-child(2):hover {
+        color: #D5AE00;
+    }
+    .sp_nav li:nth-child(3):hover {
+        color: #406653;
+    }
+    .sp_nav li:nth-child(4):hover {
+        color: #C59B6D;
+    } 
+}
