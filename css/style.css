@@ -57,7 +57,7 @@ h1 {
 }
 
 .pc_nav li {
-    height: 7vh;
+    height: 60px;
     background-color: #ffffff;
     margin-top: 30px;
     text-align: center;
@@ -506,7 +506,7 @@ table th {
 /* メディアクエリ　スマホ 350px-520px */
 /* ***************** */
 
-@media (max-width:520px) {
+@media (max-width: 520px) {
     h1 {
         writing-mode: vertical-rl;
         text-orientation: sideways;
